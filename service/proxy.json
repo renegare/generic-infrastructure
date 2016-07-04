@@ -1,0 +1,35 @@
+[
+    {
+        "name": "proxy",
+        "image": "${image}",
+        "environment": [
+            {
+                "name": "SERVICES",
+                "value": "webservices:.XXXXX.com:webservices:8080"
+            },
+            {
+                "name": "PROXY_PORT",
+                "value": "${proxy_port}"
+            },
+            {
+                "name": "HEALTHCHECK_PORT",
+                "value": "${healthcheck_port}"
+            }
+        ],
+        "portMappings": [
+            {
+                "hostPort": ${proxy_port},
+                "containerPort": ${proxy_port},
+                "protocol": "tcp"
+            },
+            {
+                "hostPort": ${healthcheck_port},
+                "containerPort": ${healthcheck_port},
+                "protocol": "tcp"
+            }
+        ],
+        "essential": true,
+        "memory": 300,
+        "cpu": 100
+    }
+]

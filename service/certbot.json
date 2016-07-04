@@ -1,0 +1,15 @@
+[
+    {
+        "name": "webservices",
+        "image": "quay.io/renegare/certbot-server:master-0e9c732a1538f230cdc5f1fd6ef03cd79411694d",
+        "environment": [
+            {
+                "name": "PORT",
+                "value": "8080"
+            }
+        ],
+        "essential": true,
+        "memory": 300,
+        "cpu": 100
+    }
+]

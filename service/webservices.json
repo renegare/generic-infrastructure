@@ -1,0 +1,23 @@
+[
+    {
+        "name": "webservices",
+        "image": "${image}",
+        "environment": [
+            {
+                "name": "SERVICES",
+                "value": "web:www.XXXXX.com prod-www.XXXXX.com:web:8080"
+            },
+            {
+                "name": "PROXY_PORT",
+                "value": "8080"
+            },
+            {
+                "name": "HEALTHCHECK_PORT",
+                "value": "3000"
+            }
+        ],
+        "essential": true,
+        "memory": 300,
+        "cpu": 100
+    }
+]
